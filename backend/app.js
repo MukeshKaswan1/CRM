@@ -5,9 +5,8 @@ var logger = require('morgan');
 const cors = require('cors');
 const db = require('./config/db');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
 var leadsRouter = require('./routes/leads');
+var conversationRouter = require('./routes/conversation');
 
 var app = express();
 app.use(cors());
@@ -18,9 +17,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/leads', leadsRouter);
+app.use('/conversation', conversationRouter);
+app.use("/ai", require("./routes/aiSuggestion"))
+
 
 app.listen(8001, () => {
   console.log(`Server is running on http://localhost:8001`);
