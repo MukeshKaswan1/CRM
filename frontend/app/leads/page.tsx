@@ -136,14 +136,10 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="relative flex w-full justify-between mb-3 px-28">
-        <Search
-          className="absolute left-32 top-2.5 h-4 w-3 text-slate-400"
-          strokeWidth={2}
-        />
+      <div className="flex items-center justify-between mb-10 max-w-6xl mx-auto">
         <Input
           type="search"
-          placeholder="Search by name/company/tags"
+          placeholder="&#128269; Search by name/company/tags"
           className="bg-background appearance-none pl-8 shadow-none md:w-1/4"
           value={search}
           onChange={(e) => setSearch(e.target.value)}

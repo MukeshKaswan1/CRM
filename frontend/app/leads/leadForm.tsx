@@ -64,7 +64,7 @@ export default function LeadForm({ isOpen, setIsOpen, isEdit, setIsEdit, selecte
                         linkedin: leadData.linkedin,
                         company: leadData.company,
                         notes: leadData.notes,
-                        tags: leadData.tags.join(", "), // Convert array to comma-separated string
+                        tags: leadData.tags.join(", "),
                         status: leadData.status,
                     });
                 } catch (error) {

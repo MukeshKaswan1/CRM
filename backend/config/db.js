@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
-const mongoURI = 'mongodb://localhost:27017/syndie';  // for local MongoDB
-// OR use MongoDB Atlas connection string if using the cloud
+const mongoURI = 'mongodb+srv://mkaswan960:mukesh%40123@mini-crm.oxefzut.mongodb.net/';
 
 mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected successfully'))
